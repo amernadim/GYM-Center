@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Dumble",
+    "age": "20-25",
+    "time": 20,
+    "img": "https://img.freepik.com/free-photo/young-fitness-man-studio_7502-5008.jpg?w=900&t=st=1664384034~exp=1664384634~hmac=635ae5e131b354a2ebee2d711cfd73338cb0ce48778639ea50cc153c126f84aa"  
+  },
+  {
+    "id": 2,
+    "name": "Treadmil",
+    "age": "20-30",
+    "time": 22,
+    "img": "https://img.freepik.com/free-photo/male-feet-sneakers-running-treadmill-gym-exercise-concept_335224-798.jpg?w=900&t=st=1664384483~exp=1664385083~hmac=6d9fdd31d5c2f86af34fc7d1e0e0d7aa0b4bead4d88bc66dbfbdb064a679111a"  
+  },
+  {
+    "id": 3,
+    "name": "Spinning Bike",
+    "age": "22-35",
+    "time": 30,
+    "img": "https://img.freepik.com/free-photo/bearded-man-using-spin-bike-physiotherapy-room_1157-38149.jpg?w=900&t=st=1664384818~exp=1664385418~hmac=9ef059851c807c1784f9c37a5c575b73567c656315cbe1dd140f9e0e908f23d6"  
+  },
+  {
+    "id": 4,
+    "name": "Stretcher",
+    "age": "25-45",
+    "time": 33,
+    "img": "https://content.active.com/Assets/Active.com+Content+Site+Digital+Assets/Fitness/580x350/Static+Stretches/Stretching+Basics.jpg"  
+  },
+  {
+    "id": 5,
+    "name": "Elliptical",
+    "age": "20-45",
+    "time": 25,
+    "img": "https://cdn.shopify.com/s/files/1/0052/7043/7978/articles/try-this-sunny-12-3-30-workout-variation-that-works-01.jpg?v=1648161134"  
+  },
+  {
+    "id": 6,
+    "name": "Push up",
+    "age": "22-35",
+    "time": 30,
+    "img": "https://www.dmarge.com/wp-content/uploads/2020/01/push-up-image.jpg"  
+  }
+]
