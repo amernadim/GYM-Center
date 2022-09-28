@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCode, faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 const Card = () => {
   const [cards,setCards] = useState([]);
@@ -11,6 +13,9 @@ const Card = () => {
 
   return (
     <div className='mt-5'>
+       <div className="navbar bg-base-100">
+      <a href='/' className="btn btn-ghost normal-case text-2xl"><FontAwesomeIcon icon={faCode} className="mr-4" /> Tiger Gym</a>
+      </div>
       <h2 className='ml-4 text-xl'>Select today’s exercise</h2> 
      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 gap-4'>
       {
@@ -26,7 +31,7 @@ const SingleCard = (props) => {
   const{age ,img,time,name} = props.card
   return(
     <div className="card card-compact w-96 bg-base-100 shadow-xl w-full">
-  <figure><img className='w-full rounded h-56' src={img} alt="Shoes" /></figure>
+  <figure><img className='w-full rounded h-40' src={img} alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">{name}</h2>
     <p>For Age : {age}</p>
