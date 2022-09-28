@@ -46,6 +46,8 @@ const Exercise = () => {
         <p className='text-bold text-lg'><span>15</span> seconds</p>
         </div>
       </div>
+
+      <button className="btn btn-primary btn-sm w-9/12 mt-2 flex mx-auto">Activity Completed</button>
      
     </div>
   )
