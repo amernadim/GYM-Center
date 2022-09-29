@@ -8,30 +8,13 @@ const Details = ({times}) => {
 
   useEffect(()=> {
     const localStorageData = localStorage.getItem('breackTime');
-    console.log(localStorageData);
-    // setBreack(breackTime);
     setBreack(localStorageData);
   },[breack])
 
   const breakTime = (breackTime) => {
     localStorage.setItem("breackTime", breackTime);
       setBreack(breackTime);  
-    // const previousBreakTime = localStorage.getItem(breackTime);   
-    // if(previousBreakTime){  
-    //   console.log(previousBreakTime);
-    //   // console.log(breackTime);
-    //   setBreack(previousBreakTime);     
-    // } else {
-    //   localStorage.setItem("breackTime", breackTime);
-    //   // setBreack(breackTime);  
-    //   setBreack(breackTime);
-    // }
-
-   
-    
   }
-
-  // console.log(times);
   return (
     <div>
     <Myself></Myself>
