@@ -1,35 +1,56 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Myself from '../MySelf/Myself';
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
 
 const Details = ({times}) => {
+  const [breack,setBreack] = useState(0);
+
+  const breakTime = (breackTime) => {
+
+    const previousBreakTime = localStorage.getItem("breackTime");
+    
+    if(previousBreakTime){  
+      console.log(previousBreakTime);
+      // console.log(breackTime);
+      setBreack();     
+
+    } else {
+      // setBreack(breackTime);  
+      localStorage.setItem("breackTime", breackTime);
+      setBreack(breackTime);
+    }
+    
+  }
+
   console.log(times);
   return (
     <div>
     <Myself></Myself>
-    <AddBreak></AddBreak> 
-    <Exercise time={times}></Exercise>    
+    <AddBreak breakTime={breakTime}></AddBreak> 
+    <Exercise breack={breack} time={times}></Exercise>    
     </div>
   );
 };
 
-const AddBreak = () => {
+const AddBreak = ({breakTime}) => {
   return (
     <div className='mt-10 ml-4'>
       <h2 className="text-xl font-bold">Add A Break</h2> 
 
       <div className='mt-5 grid grid-cols-5 gap-2'>
-       <p className='hover:bg-primary hover:text-white hover:rounded-full p-1 text-xl text-center'><span>10</span>s</p>
-       <p className='hover:bg-primary hover:text-white hover:rounded-full p-1 text-xl text-center'><span>20</span>s</p>
-       <p className='hover:bg-primary hover:text-white hover:rounded-full p-1 text-xl text-center'><span>30</span>s</p>
-       <p className='hover:bg-primary hover:text-white hover:rounded-full p-1 text-xl text-center'><span>40</span>s</p>
-       <p className='hover:bg-primary hover:text-white hover:rounded-full p-1 text-xl text-center'><span>50</span>s</p>
+       <p className='hover:bg-primary hover:text-white hover:rounded-full p-1 text-xl text-center' onClick={() => breakTime(10)}>10s</p>
+       <p className='hover:bg-primary hover:text-white hover:rounded-full p-1 text-xl text-center' onClick={() => breakTime(20)}>20s</p>
+       <p className='hover:bg-primary hover:text-white hover:rounded-full p-1 text-xl text-center' onClick={() => breakTime(30)}>30s</p>
+       <p className='hover:bg-primary hover:text-white hover:rounded-full p-1 text-xl text-center' onClick={() => breakTime(40)}>40s</p>
+       <p className='hover:bg-primary hover:text-white hover:rounded-full p-1 text-xl text-center' onClick={() => breakTime(50)}>50s</p>
         
       </div>    
     </div>
   )
 };
 
-const Exercise = ({time}) => {
+const Exercise = ({time,breack}) => {
   return (
     <div className='ml-4 mt-5'>
       <h2 className="text-xl font-bold"> Exercise Details</h2> 
@@ -44,7 +65,7 @@ const Exercise = ({time}) => {
       <div className="card card-side bg-base-100 shadow-xl p-3 mt-2">   
         <div className="flex gap-10 lg:gap-24 ">
         <h2 className='text-bold text-lg'>Break time</h2>
-        <p className='text-bold text-lg'><span>15</span> seconds</p>
+        <p className='text-bold text-lg'><span>{breack}</span> seconds</p>
         </div>
       </div>
 
