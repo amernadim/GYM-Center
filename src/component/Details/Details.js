@@ -1,22 +1,33 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Myself from '../MySelf/Myself';
 import Swal from 'sweetalert2'
 
 
 const Details = ({times}) => {
   const [breack,setBreack] = useState(0);
-  const breakTime = (breackTime) => {
 
-    const previousBreakTime = localStorage.getItem(breackTime);   
-    if(previousBreakTime){  
-      console.log(previousBreakTime);
-      // console.log(breackTime);
-      setBreack(previousBreakTime);     
-    } else {
-      localStorage.setItem("breackTime", breackTime);
-      // setBreack(breackTime);  
-      setBreack(breackTime);
-    }
+  useEffect(()=> {
+    const localStorageData = localStorage.getItem('breackTime');
+    console.log(localStorageData);
+    // setBreack(breackTime);
+    setBreack(localStorageData);
+  },[breack])
+
+  const breakTime = (breackTime) => {
+    localStorage.setItem("breackTime", breackTime);
+      setBreack(breackTime);  
+    // const previousBreakTime = localStorage.getItem(breackTime);   
+    // if(previousBreakTime){  
+    //   console.log(previousBreakTime);
+    //   // console.log(breackTime);
+    //   setBreack(previousBreakTime);     
+    // } else {
+    //   localStorage.setItem("breackTime", breackTime);
+    //   // setBreack(breackTime);  
+    //   setBreack(breackTime);
+    // }
+
+   
     
   }
 
@@ -29,6 +40,7 @@ const Details = ({times}) => {
     </div>
   );
 };
+
 
 const AddBreak = ({breakTime}) => {
   return (
