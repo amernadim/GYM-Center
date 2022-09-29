@@ -7,7 +7,7 @@ const Myself = () => {
     <figure><img className='h-12' src="Avatar.png" alt="Album"/></figure>
     <div className="card-body">
       <h2 className="card-title text-xl">Helena Jahangir</h2>
-      <p>Sydney, Australia</p>
+      <p>Chittagong,Bangladesh</p>
     </div>
     </div>
 

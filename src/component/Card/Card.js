@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCode, faCoffee } from '@fortawesome/free-solid-svg-icons'
+import {faDumbbell} from '@fortawesome/free-solid-svg-icons'
 
 const Card = ({addToCard}) => {
   const [cards,setCards] = useState([]);
@@ -15,7 +15,7 @@ const Card = ({addToCard}) => {
   return (
     <div className='mt-5'>
        <div className="navbar bg-base-100">
-      <a href='/' className="btn btn-ghost normal-case text-2xl"><FontAwesomeIcon icon={faCode} className="mr-4" /> Tiger Gym</a>
+  <a href='/' className="btn btn-ghost normal-case text-2xl"><FontAwesomeIcon icon={faDumbbell} className='mr-4'/> Tiger Gym</a>
       </div>
       <h2 className='ml-4 text-xl'>Select today’s exercise</h2> 
      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-10 gap-4'>

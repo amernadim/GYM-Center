@@ -7,20 +7,20 @@ const Details = ({times}) => {
   const [breack,setBreack] = useState(0);
   const breakTime = (breackTime) => {
 
-    const previousBreakTime = localStorage.getItem("breackTime");   
+    const previousBreakTime = localStorage.getItem(breackTime);   
     if(previousBreakTime){  
       console.log(previousBreakTime);
       // console.log(breackTime);
       setBreack(previousBreakTime);     
     } else {
-      // setBreack(breackTime);  
       localStorage.setItem("breackTime", breackTime);
+      // setBreack(breackTime);  
       setBreack(breackTime);
     }
     
   }
 
-  console.log(times);
+  // console.log(times);
   return (
     <div>
     <Myself></Myself>
