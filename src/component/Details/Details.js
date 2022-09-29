@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Myself from '../MySelf/Myself';
-import Swal from 'sweetalert2/dist/sweetalert2.js'
-import 'sweetalert2/src/sweetalert2.scss'
+// import Swal from 'sweetalert2'
+import Swal from 'sweetalert2'
 
 const Details = ({times}) => {
   const [breack,setBreack] = useState(0);
@@ -50,7 +50,12 @@ const AddBreak = ({breakTime}) => {
   )
 };
 
+const handleSweetAlert = () => { 
+  Swal.fire("Good job!", "You clicked the button!", "success");
+};
+
 const Exercise = ({time,breack}) => {
+ 
   return (
     <div className='ml-4 mt-5'>
       <h2 className="text-xl font-bold"> Exercise Details</h2> 
@@ -69,10 +74,10 @@ const Exercise = ({time,breack}) => {
         </div>
       </div>
 
-      <button className="btn btn-primary btn-sm w-9/12 mt-2 flex mx-auto">Activity Completed</button>
+      <button className="btn btn-primary btn-sm w-9/12 mt-2 flex mx-auto" onClick={handleSweetAlert}>Activity Completed</button>
      
     </div>
   )
-}
+};
 
 export default Details;
