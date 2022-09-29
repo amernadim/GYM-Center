@@ -1,20 +1,17 @@
 import React, { useState } from 'react';
 import Myself from '../MySelf/Myself';
-// import Swal from 'sweetalert2'
 import Swal from 'sweetalert2'
+
 
 const Details = ({times}) => {
   const [breack,setBreack] = useState(0);
-
   const breakTime = (breackTime) => {
 
-    const previousBreakTime = localStorage.getItem("breackTime");
-    
+    const previousBreakTime = localStorage.getItem("breackTime");   
     if(previousBreakTime){  
       console.log(previousBreakTime);
       // console.log(breackTime);
-      setBreack();     
-
+      setBreack(previousBreakTime);     
     } else {
       // setBreack(breackTime);  
       localStorage.setItem("breackTime", breackTime);
@@ -51,7 +48,7 @@ const AddBreak = ({breakTime}) => {
 };
 
 const handleSweetAlert = () => { 
-  Swal.fire("Good job!", "You clicked the button!", "success");
+  Swal.fire("Good job!", "Your Activity Completed!", "success");
 };
 
 const Exercise = ({time,breack}) => {

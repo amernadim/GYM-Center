@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import Card from './component/Card/Card';
 import Details from './component/Details/Details';
+import Footer from './component/Footer/Footer';
 import Question from './component/Question/Question';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
      </div>
      </div>
      <Question></Question>
+     <Footer></Footer>
     </div>   
   );
 }
