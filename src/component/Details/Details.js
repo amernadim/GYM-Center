@@ -1,12 +1,13 @@
 import React from 'react';
 import Myself from '../MySelf/Myself';
 
-const Details = () => {
+const Details = ({times}) => {
+  console.log(times);
   return (
     <div>
     <Myself></Myself>
     <AddBreak></AddBreak> 
-    <Exercise></Exercise>    
+    <Exercise time={times}></Exercise>    
     </div>
   );
 };
@@ -28,7 +29,7 @@ const AddBreak = () => {
   )
 };
 
-const Exercise = () => {
+const Exercise = ({time}) => {
   return (
     <div className='ml-4 mt-5'>
       <h2 className="text-xl font-bold"> Exercise Details</h2> 
@@ -36,7 +37,7 @@ const Exercise = () => {
       <div className="card card-side bg-base-100 shadow-xl p-3">   
         <div className="flex gap-10 lg:gap-20">
         <h2 className='text-bold text-lg'>Exercise time</h2>
-        <p className='text-bold text-lg'><span>200</span> seconds</p>
+        <p className='text-bold text-lg'><span>{time}</span> seconds</p>
         </div>
       </div>
 
